@@ -20,12 +20,12 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule } from '@angular/common/http';
-import { ChickenBreedsComponentComponent } from './components/chicken-breeds-component/chicken-breeds-component.component'
+import { ChickenBreedsService } from './services/chicken-breeds.service'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ChickenBreedsComponentComponent
+    AppComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -46,9 +46,11 @@ import { ChickenBreedsComponentComponent } from './components/chicken-breeds-com
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,   
   ],
-  providers: [],
+  providers: [
+    ChickenBreedsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
